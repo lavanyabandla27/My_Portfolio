@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lavanya Sai Bandla — CSE Portfolio | Projects</title>
+  <meta name="description" content="Explore technical projects covering AI-IoT, Natural Language Processing, machine learning, and Java software systems built by Lavanya Sai Bandla.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dark-theme.css">
+  
+  <!-- Theme script -->
+  <script src="theme.js"></script>
+</head>
+<body>
+
+  <!-- Loading Animation -->
+  <div id="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Background Shapes & Particles -->
+  <div class="animated-bg">
+    <div class="bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div id="particles-container"></div>
+  </div>
+
+  <!-- Floating Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom glass-panel">
+    <div class="container-fluid">
+      <a class="navbar-brand navbar-brand-custom" href="index.html">Lavanya Bandla</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="skills.html">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="achievements.html">Achievements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="experience.html">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+            <button class="theme-toggle-btn" aria-label="Toggle Theme">
+              <i class="fas fa-sun"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title glowing-title animate-on-scroll fade-in-down">My Projects</h1>
+      <p class="page-subtitle animate-on-scroll fade-in-up">Demonstrating software development skills, machine learning implementations, API integrations, and cloud architectures.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container py-4">
+    
+    <!-- Search and Filters Panel -->
+    <div class="row mb-5 animate-on-scroll fade-in-up">
+      <div class="col-12">
+        <div class="glass-panel search-filter-wrap">
+          <div class="row align-items-center g-4">
+            <!-- Search bar input -->
+            <div class="col-lg-5 search-input-group">
+              <i class="fas fa-search search-icon"></i>
+              <input type="text" id="project-search" class="form-control form-control-custom" placeholder="Search by title, description or technology...">
+            </div>
+            <!-- Category buttons filter -->
+            <div class="col-lg-7 d-flex justify-content-lg-end">
+              <div class="filter-btn-group">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai-ml">AI & IoT / ML</button>
+                <button class="filter-btn" data-filter="nlp-ai">NLP & Generative AI</button>
+                <button class="filter-btn" data-filter="java">Java Development</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Grid Container -->
+    <div class="row" id="projects-grid">
+      <!-- Injected Dynamically by projects.js -->
+    </div>
+
+  </main>
+
+  <!-- Project Details Modal -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom border-0">
+          <h4 class="modal-title fw-bold text-indigo" id="projectModalLabel">Project Details</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-body-custom" id="projectModalBody">
+          <!-- Filled dynamically in projects.js -->
+        </div>
+        <div class="modal-footer modal-footer-custom border-0">
+          <a id="projectModalGithub" href="#" target="_blank" class="btn btn-premium btn-premium-primary">
+            <i class="fab fa-github me-2"></i>View GitHub Source
+          </a>
+          <button type="button" class="btn btn-premium btn-premium-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <a class="footer-logo" href="index.html">Lavanya Bandla</a>
+          <p class="pe-md-5">Building high-performance software, intelligent ML algorithms, and serverless cloud architectures. Let's build something exceptional.</p>
+        </div>
+        <div class="col-md-3 col-6 mb-4 mb-md-0">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h5>Quick Contact</h5>
+          <ul class="footer-links">
+            <li><a href="mailto:lavanyabandla04@gmail.com"><i class="fas fa-envelope me-2"></i>Email Me</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope me-2"></i>Contact Page</a></li>
+            <li><a href="achievements.html"><i class="fas fa-award me-2"></i>Achievements</a></li>
+            <li><a href="experience.html"><i class="fas fa-briefcase me-2"></i>Experience</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Lavanya Sai Bandla. All Rights Reserved. Designed for Excellence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom animations, projects & core JS -->
+  <script src="animations.js"></script>
+  <script src="projects.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

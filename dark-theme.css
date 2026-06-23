@@ -1,0 +1,126 @@
+/* 
+  dark-theme.css
+  Lavanya Sai Bandla Portfolio - Dark Theme Stylesheet
+*/
+
+[data-theme="dark"] {
+  /* Dark Mode Variables Override */
+  --bg-primary: #070a13;
+  --bg-secondary: #0b0f19;
+  --bg-tertiary: #111827;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  
+  --accent-color: #6366f1; /* Neon Purple-Indigo */
+  --accent-color-rgb: 99, 102, 241;
+  --accent-glow: rgba(99, 102, 241, 0.4);
+  
+  --accent-secondary: #06b6d4; /* Neon Cyan */
+  --accent-secondary-rgb: 6, 182, 212;
+  --accent-secondary-glow: rgba(6, 182, 212, 0.4);
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+  --card-bg: rgba(11, 15, 25, 0.65);
+  --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+  
+  --glass-bg: rgba(11, 15, 25, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  
+  --cursor-color: rgba(99, 102, 241, 0.5);
+}
+
+/* Dark Theme Specific Enhancements */
+[data-theme="dark"] body {
+  /* Subtle dark grid background pattern */
+  background-image: 
+    radial-gradient(rgba(99, 102, 241, 0.07) 1px, transparent 0),
+    radial-gradient(rgba(6, 182, 212, 0.04) 1.5px, transparent 0);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Glowing text shadows for headings */
+[data-theme="dark"] .glowing-title {
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #67e8f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(99, 102, 241, 0.15);
+}
+
+/* Glass panel glow in dark mode */
+[data-theme="dark"] .glass-panel {
+  box-shadow: 
+    var(--glass-shadow), 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Custom cursor in dark mode */
+[data-theme="dark"] .custom-cursor {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+}
+
+/* 3D profile picture glow */
+[data-theme="dark"] .profile-img-wrap {
+  border-color: rgba(6, 182, 212, 0.2);
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+}
+
+/* Timeline dark mode enhancements */
+[data-theme="dark"] .timeline-item::before {
+  background: var(--bg-secondary);
+  border-color: var(--accent-secondary);
+}
+
+/* Projects search/filter panel details */
+[data-theme="dark"] .search-input {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .filter-btn {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .project-card {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .project-card:hover {
+  box-shadow: 0 20px 45px -12px rgba(99, 102, 241, 0.15);
+}
+
+/* Form input dark style */
+[data-theme="dark"] .form-control-custom {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Background floating shapes colors */
+[data-theme="dark"] .shape-1 {
+  background-color: var(--accent-color);
+  opacity: 0.2;
+}
+
+[data-theme="dark"] .shape-2 {
+  background-color: var(--accent-secondary);
+  opacity: 0.15;
+}
+
+/* Contact success modal adjustment */
+[data-theme="dark"] .check-icon::before,
+[data-theme="dark"] .check-icon::after,
+[data-theme="dark"] .icon-fix {
+  background: var(--bg-secondary);
+}
+
+/* Floating Code Elements brightness */
+[data-theme="dark"] .floating-element {
+  color: #ffffff;
+  opacity: 0.08;
+}
+
+/* Back to top button dark mode glow */
+[data-theme="dark"] .back-to-top {
+  box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
+}
